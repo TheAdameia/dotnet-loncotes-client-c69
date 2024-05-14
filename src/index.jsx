@@ -9,6 +9,7 @@ import CreateMaterial from "./components/tickets/CreateMaterial";
 import { PatronList } from "./components/Patrons/PatronsList";
 import { PatronDetails } from "./components/Patrons/PatronDetails";
 import { EditPatron } from "./components/Patrons/EditPatron";
+import { CheckoutList } from "./components/Checkouts/CheckoutsList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,7 +27,10 @@ root.render(
             <Route index element={<PatronDetails />} />
             <Route path="edit" element={<EditPatron />} />
           </Route>
-          {/* Patron stuff goes here */}
+        </Route>
+        <Route path="checkouts">
+          <Route index element={<CheckoutList />} />
+          {/* checkouts go here */}
         </Route>
       </Route>
     </Routes>

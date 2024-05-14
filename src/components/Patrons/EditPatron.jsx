@@ -36,7 +36,7 @@ export const EditPatron = () => {
                     <Input
                         name="address"
                         type="text"
-                        placeholder="placeholder"
+                        placeholder={patron.address}
                         value={address}
                         onChange={(e) => {
                             setAddress(e.target.value)
@@ -49,6 +49,7 @@ export const EditPatron = () => {
                         type="text"
                         name="email"
                         value={email}
+                        placeholder={patron.email}
                         onChange={(e) => {
                             setEmail(e.target.value)
                         }}

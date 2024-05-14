@@ -9,10 +9,18 @@ export const getPatron = (id) => {
   };
 
 
-  export const editPatron = (patron) => {
+export const editPatron = (patron) => {
     return fetch(`${_apiUrl}/${patron.id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(patron),
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(patron),
     })
-  };
+};
+
+export const flipPatronActivation = (id) => {
+    return fetch (`${_apiUrl}/${id}`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(id),
+    })
+}
