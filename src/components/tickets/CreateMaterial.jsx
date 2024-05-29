@@ -66,6 +66,7 @@ export default function CreateMaterial() {
         <FormGroup>
           <Label htmlFor="materialType">Material Type</Label>
           <Input
+            key={materialTypeId}
             name="materialType"
             type="select"
             value={materialTypeId}

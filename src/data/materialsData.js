@@ -16,3 +16,8 @@ export const createMaterial = (material) => {
     body: JSON.stringify(material),
   }).then((res) => res.json());
 };
+
+
+export const getAvailableMaterial = () => {
+  return fetch(`${_apiUrl}/available`).then((r) => r.json());
+}
